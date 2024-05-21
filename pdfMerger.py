@@ -4,14 +4,14 @@ Created on Fri May 17 15:04:56 2024
 @author: NITRON 5
 """
 import streamlit as st
-import PyPDF2
+import pypdf
 from io import BytesIO
 
 def merge_pdfs(input_pdfs, output_pdf):
     """
     Function to merge PDFs
     """
-    pdf_merger = PyPDF2.PdfMerger()
+    pdf_merger = pypdf.PdfMerger()
 
     for pdf_file in input_pdfs:
         pdf_merger.append(pdf_file)
